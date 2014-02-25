@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>trq@SnrevrZHQ.bet</string>
+	<key>contactName</key>
+	<string>Michael Granger</string>
+	<key>description</key>
+	<string>A TextMate 2 bundle for RSpec 3. You probably won't like it.
+</string>
+	<key>name</key>
+	<string>RSpec3</string>
+	<key>uuid</key>
+	<string>FC2AC324-0FA1-49D0-A7F1-BD9E0F0EF251</string>
+</dict>
+</plist>
