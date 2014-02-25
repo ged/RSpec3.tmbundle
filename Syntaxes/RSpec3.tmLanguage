@@ -4,8 +4,10 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>src</string>
+		<string>spec.rb</string>
 	</array>
+	<key>keyEquivalent</key>
+	<string>^~R</string>
 	<key>name</key>
 	<string>RSpec3</string>
 	<key>patterns</key>
@@ -182,7 +184,7 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.untitled</string>
+	<string>source.ruby.rspec</string>
 	<key>uuid</key>
 	<string>4E4C3DA2-D04C-44CF-AAA5-60790EFF5009</string>
 </dict>

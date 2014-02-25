@@ -1,0 +1,899 @@
+2013-01-04  Michael Granger  <ged@FaerieMUD.org>
+
+	* History.rdoc, Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Bump the patch version, update history, bump rspec dependency.
+	[38bb23813f6a] [tip]
+
+	* data/rspec-formatter-webkit/templates/failed.rhtml:
+	Fix shared-group formatting for RSpec 2.12.2.
+	[6f5928e63d5f]
+
+2013-01-02  Michael Granger  <ged@FaerieMUD.org>
+
+	* data/rspec-formatter-webkit/css/textmate-rspec.css,
+	lib/rspec/core/formatters/webkit.rb:
+	Merged with github mirror
+	[29c50ac9e93b]
+
+2012-08-31  Michael Granger  <ged@FaerieMUD.org>
+
+	* Merge pull request #3 from cfabianski/protect_file_expand_path
+
+	Protect the File.expand_path if $1 is nil
+	[2ff3592e7fbc]
+
+2012-08-31  Cédric FABIANSKI  <cfabianski@leadformance.com>
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Protect the File.expand_path if $1 is nil
+	[cfb2d16674a5]
+
+2012-05-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.2.0 for changeset cfa1fcc7f971
+	[5aff2e5c36a6]
+
+	* .hgsigs:
+	Added signature for changeset 429006ee603b
+	[6c7b2a75b1b7]
+
+	* History.rdoc, lib/rspec/core/formatters/webkit.rb:
+	Bumped minor version, updated history.
+	[8bc2fdbeab4a]
+
+2012-05-22  Michael Granger  <ged@FaerieMUD.org>
+
+	* README.rdoc:
+	README update.
+	[e2073707033a]
+
+	* data/rspec-formatter-webkit/css/textmate-rspec.css:
+	Support Loggability-style classes in the CSS.
+	[9b063742b7f2]
+
+2012-01-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.5 for changeset 05d9ec883cf1
+	[23742261a58d]
+
+	* .hgsigs:
+	Added signature for changeset bfc3e0258448
+	[eb8583d4b39e]
+
+2012-01-07  Michael Granger  <ged@FaerieMUD.org>
+
+	* History.rdoc, README.rdoc, lib/rspec/core/formatters/webkit.rb:
+	Bumped patch version, updated README and history.
+	[108ea70a3bad]
+
+2012-01-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Fix for 2.8.0 changing the namespace of PendingExampleFixedErrors.
+	[106202085686]
+
+	* .tm_properties:
+	Adding my TextMate 2 properties file
+	[8d90798986c8]
+
+2011-11-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.4 for changeset 7c99c3d9e168
+	[93c1b38b8255]
+
+	* .hgsigs:
+	Added signature for changeset 76acf47ac12f
+	[d129c202961d]
+
+	* .hgtags:
+	Added tag tested_193 for changeset c37b1f04b2c1
+	[fc06df606674]
+
+	* .hgtags:
+	Added tag semver for changeset 40f3f2e556e3
+	[91ec83c5271b]
+
+	* History.md, History.rdoc, Manifest.txt, README.md, README.rdoc,
+	Rakefile, legacy/History.md, legacy/History.rdoc, legacy/README.md,
+	legacy/README.rdoc, legacy/Rakefile,
+	lib/rspec/core/formatters/webkit.rb, output.html:
+	Clean up YARD debris, remove old example stuff.
+	[1c2d3043072f]
+
+	* .hgignore, Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Fixed a 1.9.3 issue, and updated for RSpec 2.7.x
+	[10560d89f906]
+
+2011-03-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Remove unneeded require.
+	[c1e9569bfe97]
+
+2011-02-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.3 for changeset 0004aac1fd55
+	[3548c5aff4ab]
+
+	* .hgsigs:
+	Added signature for changeset 5e541f3dd9fc
+	[887cce46076f]
+
+	* History.md, lib/rspec/core/formatters/webkit.rb:
+	Removed deprecated use of Config.datadir; bumped patch version.
+	[2482d225e66e]
+
+2011-02-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.2 for changeset 0d9cceccb491
+	[1a63a98bf32a]
+
+	* .hgsigs:
+	Added signature for changeset 134fc95a503c
+	[8900bde5a4cc]
+
+	* History.md, Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Trying the dependency fix again.
+	[55599bed95d6]
+
+2011-01-26  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.1 for changeset 9190bd8c3a43
+	[6a2f46609ee4]
+
+	* .hgsigs:
+	Added signature for changeset 58f81a7c6f7e
+	[30078e7e72eb]
+
+	* Rakefile, legacy/Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Update to hoe-mercurial, make RSpec dependency a little less
+	pessimistic.
+	[e6df9dcde997]
+
+2010-12-22  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.0 for changeset 40f3f2e556e3
+	[2fac23f8376e]
+
+	* .hgsigs:
+	Added signature for changeset f6f38e109c2c
+	[5d6a0247d5f1]
+
+	* History.md, legacy/Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Changing version to 2.1.0; I'm not sure why I thought it should skip
+	that version
+	[3c20383430fd]
+
+	* Rakefile:
+	Adding a task to build the "legacy" gem to the Rakefile
+	[159c61cc7749]
+
+2010-12-21  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, legacy/History.md, legacy/Manifest.txt, legacy/README.md,
+	legacy/Rakefile:
+	Adding a build environment for the webkit-rspec-formatter
+	placeholder gem.
+	[07f093320545]
+
+	* Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Updated for RSpec 2.3.x.
+	[7a6ddfd42b6a]
+
+	* .hgsub, .hgsubstate, History.md, Manifest.txt, README.md, Rakefile,
+	data/rspec-formatter-webkit/css/textmate-rspec.css, data/rspec-
+	formatter-webkit/images/clock.png, data/rspec-formatter-
+	webkit/images/cross_circle.png, data/rspec-formatter-
+	webkit/images/cross_circle_frame.png, data/rspec-formatter-
+	webkit/images/cross_octagon.png, data/rspec-formatter-
+	webkit/images/cross_octagon_frame.png, data/rspec-formatter-
+	webkit/images/cross_shield.png, data/rspec-formatter-
+	webkit/images/exclamation.png, data/rspec-formatter-
+	webkit/images/exclamation_frame.png, data/rspec-formatter-
+	webkit/images/exclamation_shield.png, data/rspec-formatter-
+	webkit/images/exclamation_small.png, data/rspec-formatter-
+	webkit/images/plus_circle.png, data/rspec-formatter-
+	webkit/images/plus_circle_frame.png, data/rspec-formatter-
+	webkit/images/question.png, data/rspec-formatter-
+	webkit/images/question_frame.png, data/rspec-formatter-
+	webkit/images/question_shield.png, data/rspec-formatter-
+	webkit/images/question_small.png, data/rspec-formatter-
+	webkit/images/tick.png, data/rspec-formatter-
+	webkit/images/tick_circle.png, data/rspec-formatter-
+	webkit/images/tick_circle_frame.png, data/rspec-formatter-
+	webkit/images/tick_shield.png, data/rspec-formatter-
+	webkit/images/tick_small.png, data/rspec-formatter-
+	webkit/images/tick_small_circle.png, data/rspec-formatter-
+	webkit/images/ticket.png, data/rspec-formatter-
+	webkit/images/ticket_arrow.png, data/rspec-formatter-
+	webkit/images/ticket_exclamation.png, data/rspec-formatter-
+	webkit/images/ticket_minus.png, data/rspec-formatter-
+	webkit/images/ticket_pencil.png, data/rspec-formatter-
+	webkit/images/ticket_plus.png, data/rspec-formatter-
+	webkit/images/ticket_small.png, data/rspec-formatter-
+	webkit/js/jquery-1.4.2.min.js, data/rspec-formatter-webkit/js
+	/textmate-rspec.js, data/rspec-formatter-
+	webkit/templates/failed.rhtml, data/rspec-formatter-
+	webkit/templates/footer.rhtml, data/rspec-formatter-
+	webkit/templates/header.rhtml, data/rspec-formatter-
+	webkit/templates/page.rhtml, data/rspec-formatter-
+	webkit/templates/passed.rhtml, data/rspec-formatter-webkit/templates
+	/pending-fixed.rhtml, data/rspec-formatter-
+	webkit/templates/pending.rhtml, data/webkit-rspec-formatter/css
+	/textmate-rspec.css, data/webkit-rspec-formatter/images/clock.png,
+	data/webkit-rspec-formatter/images/cross_circle.png, data/webkit-
+	rspec-formatter/images/cross_circle_frame.png, data/webkit-rspec-
+	formatter/images/cross_octagon.png, data/webkit-rspec-
+	formatter/images/cross_octagon_frame.png, data/webkit-rspec-
+	formatter/images/cross_shield.png, data/webkit-rspec-
+	formatter/images/exclamation.png, data/webkit-rspec-
+	formatter/images/exclamation_frame.png, data/webkit-rspec-
+	formatter/images/exclamation_shield.png, data/webkit-rspec-
+	formatter/images/exclamation_small.png, data/webkit-rspec-
+	formatter/images/plus_circle.png, data/webkit-rspec-
+	formatter/images/plus_circle_frame.png, data/webkit-rspec-
+	formatter/images/question.png, data/webkit-rspec-
+	formatter/images/question_frame.png, data/webkit-rspec-
+	formatter/images/question_shield.png, data/webkit-rspec-
+	formatter/images/question_small.png, data/webkit-rspec-
+	formatter/images/tick.png, data/webkit-rspec-
+	formatter/images/tick_circle.png, data/webkit-rspec-
+	formatter/images/tick_circle_frame.png, data/webkit-rspec-
+	formatter/images/tick_shield.png, data/webkit-rspec-
+	formatter/images/tick_small.png, data/webkit-rspec-
+	formatter/images/tick_small_circle.png, data/webkit-rspec-
+	formatter/images/ticket.png, data/webkit-rspec-
+	formatter/images/ticket_arrow.png, data/webkit-rspec-
+	formatter/images/ticket_exclamation.png, data/webkit-rspec-
+	formatter/images/ticket_minus.png, data/webkit-rspec-
+	formatter/images/ticket_pencil.png, data/webkit-rspec-
+	formatter/images/ticket_plus.png, data/webkit-rspec-
+	formatter/images/ticket_small.png, data/webkit-rspec-
+	formatter/js/jquery-1.4.2.min.js, data/webkit-rspec-formatter/js
+	/textmate-rspec.js, data/webkit-rspec-
+	formatter/templates/failed.rhtml, data/webkit-rspec-
+	formatter/templates/footer.rhtml, data/webkit-rspec-
+	formatter/templates/header.rhtml, data/webkit-rspec-
+	formatter/templates/page.rhtml, data/webkit-rspec-
+	formatter/templates/passed.rhtml, data/webkit-rspec-
+	formatter/templates/pending-fixed.rhtml, data/webkit-rspec-
+	formatter/templates/pending.rhtml,
+	lib/rspec/core/formatters/webkit.rb, lib/rspec/mate/runner.rb,
+	project.yml:
+	Renamed to name that better follows gem-naming conventions;
+	converted to Hoe.
+	[aba062ae29fc]
+
+2010-11-24  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgsubstate, README, data/webkit-rspec-
+	formatter/templates/example.rhtml:
+	Merged with 22:e5ee93066db2
+	[89ecd5895d6e]
+
+2010-10-29  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 2.0.1 for changeset eab68b1cc938
+	[0c5a75178bef]
+
+	* .hgsigs:
+	Added signature for changeset 894d6255c1f5
+	[cd870c29e9de]
+
+	* .hgignore, Rakefile, data/webkit-rspec-
+	formatter/templates/failed.rhtml,
+	lib/rspec/core/formatters/webkit.rb, project.yml:
+	Bugfix for shared example group output.
+	[76fc1df90156]
+
+2010-10-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 2.0.0 for changeset 1a034cb600d3
+	[d0f13a135929]
+
+	* .hgsigs:
+	Added signature for changeset 18eebc435eab
+	[77cf3f19c8dd]
+
+	* README.md:
+	Absolute offworld image URLs, then?
+	[8edaa63be6d8]
+
+	* README.md, docs/tmrspec-example.png, docs/tmrspecopts-shellvar.png:
+	Update the readme with screenshots (*experimental*)
+	[80d4717716d9]
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Cleanup the failure callback and use the snippet extractor even for
+	failed-pending examples
+	[53348ddd759e]
+
+	* data/webkit-rspec-formatter/templates/pending-fixed.rhtml:
+	Fix the DD's class in pending-fixed examples
+	[1cfd6f4471c1]
+
+	* data/webkit-rspec-formatter/css/textmate-rspec.css, data/webkit-
+	rspec-formatter/templates/failed.rhtml:
+	HTML-escape failure message lines
+	[b7c050f77a6d]
+
+2012-07-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Whitespace fix.
+	[9c6c6207f451]
+
+	* .tm_properties:
+	Don't include fileType settings for spec files in .tm_properties
+	[d3cfa9f4284d]
+
+2012-05-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.2.0 for changeset cfa1fcc7f971
+	[7822119353d1]
+
+	* .hgsigs:
+	Added signature for changeset 429006ee603b
+	[cfa1fcc7f971] [v2.2.0]
+
+	* History.rdoc, lib/rspec/core/formatters/webkit.rb:
+	Bumped minor version, updated history.
+	[429006ee603b]
+
+2012-05-22  Michael Granger  <ged@FaerieMUD.org>
+
+	* README.rdoc:
+	README update.
+	[07566949254f]
+
+	* data/rspec-formatter-webkit/css/textmate-rspec.css:
+	Support Loggability-style classes in the CSS.
+	[833c65599cf3]
+
+2012-01-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.5 for changeset 05d9ec883cf1
+	[d46f56d2c978]
+
+	* .hgsigs:
+	Added signature for changeset bfc3e0258448
+	[05d9ec883cf1] [v2.1.5]
+
+2012-01-07  Michael Granger  <ged@FaerieMUD.org>
+
+	* History.rdoc, README.rdoc, lib/rspec/core/formatters/webkit.rb:
+	Bumped patch version, updated README and history.
+	[bfc3e0258448]
+
+2012-01-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Fix for 2.8.0 changing the namespace of PendingExampleFixedErrors.
+	[a4945bc39cbf]
+
+	* .tm_properties:
+	Adding my TextMate 2 properties file
+	[718525e9624c]
+
+2011-11-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.4 for changeset 7c99c3d9e168
+	[cee2d1b932a0]
+
+	* .hgsigs:
+	Added signature for changeset 76acf47ac12f
+	[7c99c3d9e168] [v2.1.4]
+
+	* .hgtags:
+	Added tag tested_193 for changeset c37b1f04b2c1
+	[76acf47ac12f]
+
+	* .hgtags:
+	Added tag semver for changeset 40f3f2e556e3
+	[c37b1f04b2c1] [tested_193]
+
+	* History.md, History.rdoc, Manifest.txt, README.md, README.rdoc,
+	Rakefile, legacy/History.md, legacy/History.rdoc, legacy/README.md,
+	legacy/README.rdoc, legacy/Rakefile,
+	lib/rspec/core/formatters/webkit.rb, output.html:
+	Clean up YARD debris, remove old example stuff.
+	[49d3fa87ccb6]
+
+	* .hgignore, Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Fixed a 1.9.3 issue, and updated for RSpec 2.7.x
+	[919bfb6b3cd8]
+
+2011-03-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Remove unneeded require.
+	[e4ca71751d39]
+
+2011-02-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.3 for changeset 0004aac1fd55
+	[cf5e808e8845]
+
+	* .hgsigs:
+	Added signature for changeset 5e541f3dd9fc
+	[0004aac1fd55] [v2.1.3]
+
+	* History.md, lib/rspec/core/formatters/webkit.rb:
+	Removed deprecated use of Config.datadir; bumped patch version.
+	[5e541f3dd9fc]
+
+2011-02-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.2 for changeset 0d9cceccb491
+	[fb529df0176b]
+
+	* .hgsigs:
+	Added signature for changeset 134fc95a503c
+	[0d9cceccb491] [v2.1.2]
+
+	* History.md, Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Trying the dependency fix again.
+	[134fc95a503c]
+
+2011-01-26  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.1 for changeset 9190bd8c3a43
+	[f645ead65710]
+
+	* .hgsigs:
+	Added signature for changeset 58f81a7c6f7e
+	[9190bd8c3a43] [v2.1.1]
+
+	* Rakefile, legacy/Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Update to hoe-mercurial, make RSpec dependency a little less
+	pessimistic.
+	[58f81a7c6f7e]
+
+2010-12-22  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.1.0 for changeset 40f3f2e556e3
+	[efbd00cc4b91]
+
+	* .hgsigs:
+	Added signature for changeset f6f38e109c2c
+	[40f3f2e556e3] [semver, v2.1.0]
+
+	* History.md, legacy/Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Changing version to 2.1.0; I'm not sure why I thought it should skip
+	that version
+	[f6f38e109c2c]
+
+	* Rakefile:
+	Adding a task to build the "legacy" gem to the Rakefile
+	[fb42a1ce5196]
+
+2010-12-21  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, legacy/History.md, legacy/Manifest.txt, legacy/README.md,
+	legacy/Rakefile:
+	Adding a build environment for the webkit-rspec-formatter
+	placeholder gem.
+	[121e46ea8bc9]
+
+	* Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Updated for RSpec 2.3.x.
+	[7f571725d6ff]
+
+	* .hgsub, .hgsubstate, .hgsubstate, History.md, Manifest.txt,
+	README.md, Rakefile, data/rspec-formatter-webkit/css/textmate-
+	rspec.css, data/rspec-formatter-webkit/images/clock.png, data/rspec-
+	formatter-webkit/images/cross_circle.png, data/rspec-formatter-
+	webkit/images/cross_circle_frame.png, data/rspec-formatter-
+	webkit/images/cross_octagon.png, data/rspec-formatter-
+	webkit/images/cross_octagon_frame.png, data/rspec-formatter-
+	webkit/images/cross_shield.png, data/rspec-formatter-
+	webkit/images/exclamation.png, data/rspec-formatter-
+	webkit/images/exclamation_frame.png, data/rspec-formatter-
+	webkit/images/exclamation_shield.png, data/rspec-formatter-
+	webkit/images/exclamation_small.png, data/rspec-formatter-
+	webkit/images/plus_circle.png, data/rspec-formatter-
+	webkit/images/plus_circle_frame.png, data/rspec-formatter-
+	webkit/images/question.png, data/rspec-formatter-
+	webkit/images/question_frame.png, data/rspec-formatter-
+	webkit/images/question_shield.png, data/rspec-formatter-
+	webkit/images/question_small.png, data/rspec-formatter-
+	webkit/images/tick.png, data/rspec-formatter-
+	webkit/images/tick_circle.png, data/rspec-formatter-
+	webkit/images/tick_circle_frame.png, data/rspec-formatter-
+	webkit/images/tick_shield.png, data/rspec-formatter-
+	webkit/images/tick_small.png, data/rspec-formatter-
+	webkit/images/tick_small_circle.png, data/rspec-formatter-
+	webkit/images/ticket.png, data/rspec-formatter-
+	webkit/images/ticket_arrow.png, data/rspec-formatter-
+	webkit/images/ticket_exclamation.png, data/rspec-formatter-
+	webkit/images/ticket_minus.png, data/rspec-formatter-
+	webkit/images/ticket_pencil.png, data/rspec-formatter-
+	webkit/images/ticket_plus.png, data/rspec-formatter-
+	webkit/images/ticket_small.png, data/rspec-formatter-
+	webkit/js/jquery-1.4.2.min.js, data/rspec-formatter-webkit/js
+	/textmate-rspec.js, data/rspec-formatter-
+	webkit/templates/failed.rhtml, data/rspec-formatter-
+	webkit/templates/footer.rhtml, data/rspec-formatter-
+	webkit/templates/header.rhtml, data/rspec-formatter-
+	webkit/templates/page.rhtml, data/rspec-formatter-
+	webkit/templates/passed.rhtml, data/rspec-formatter-webkit/templates
+	/pending-fixed.rhtml, data/rspec-formatter-
+	webkit/templates/pending.rhtml, data/webkit-rspec-formatter/css
+	/textmate-rspec.css, data/webkit-rspec-formatter/images/clock.png,
+	data/webkit-rspec-formatter/images/cross_circle.png, data/webkit-
+	rspec-formatter/images/cross_circle_frame.png, data/webkit-rspec-
+	formatter/images/cross_octagon.png, data/webkit-rspec-
+	formatter/images/cross_octagon_frame.png, data/webkit-rspec-
+	formatter/images/cross_shield.png, data/webkit-rspec-
+	formatter/images/exclamation.png, data/webkit-rspec-
+	formatter/images/exclamation_frame.png, data/webkit-rspec-
+	formatter/images/exclamation_shield.png, data/webkit-rspec-
+	formatter/images/exclamation_small.png, data/webkit-rspec-
+	formatter/images/plus_circle.png, data/webkit-rspec-
+	formatter/images/plus_circle_frame.png, data/webkit-rspec-
+	formatter/images/question.png, data/webkit-rspec-
+	formatter/images/question_frame.png, data/webkit-rspec-
+	formatter/images/question_shield.png, data/webkit-rspec-
+	formatter/images/question_small.png, data/webkit-rspec-
+	formatter/images/tick.png, data/webkit-rspec-
+	formatter/images/tick_circle.png, data/webkit-rspec-
+	formatter/images/tick_circle_frame.png, data/webkit-rspec-
+	formatter/images/tick_shield.png, data/webkit-rspec-
+	formatter/images/tick_small.png, data/webkit-rspec-
+	formatter/images/tick_small_circle.png, data/webkit-rspec-
+	formatter/images/ticket.png, data/webkit-rspec-
+	formatter/images/ticket_arrow.png, data/webkit-rspec-
+	formatter/images/ticket_exclamation.png, data/webkit-rspec-
+	formatter/images/ticket_minus.png, data/webkit-rspec-
+	formatter/images/ticket_pencil.png, data/webkit-rspec-
+	formatter/images/ticket_plus.png, data/webkit-rspec-
+	formatter/images/ticket_small.png, data/webkit-rspec-
+	formatter/js/jquery-1.4.2.min.js, data/webkit-rspec-formatter/js
+	/textmate-rspec.js, data/webkit-rspec-
+	formatter/templates/failed.rhtml, data/webkit-rspec-
+	formatter/templates/footer.rhtml, data/webkit-rspec-
+	formatter/templates/header.rhtml, data/webkit-rspec-
+	formatter/templates/page.rhtml, data/webkit-rspec-
+	formatter/templates/passed.rhtml, data/webkit-rspec-
+	formatter/templates/pending-fixed.rhtml, data/webkit-rspec-
+	formatter/templates/pending.rhtml,
+	lib/rspec/core/formatters/webkit.rb, lib/rspec/mate/runner.rb,
+	project.yml:
+	Renamed to name that better follows gem-naming conventions;
+	converted to Hoe.
+	[d4995c448288]
+
+2010-11-24  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgsubstate, README, data/webkit-rspec-
+	formatter/templates/example.rhtml:
+	Merged with 22:e5ee93066db2
+	[7c482505fedf]
+
+2010-10-21  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgsub, .hgsubstate:
+	Adding rake tasklibs subrepo
+	[e5ee93066db2]
+
+2010-10-29  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 2.0.1 for changeset eab68b1cc938
+	[c55a20ca17d5]
+
+	* .hgsigs:
+	Added signature for changeset 894d6255c1f5
+	[eab68b1cc938] [2.0.1]
+
+	* .hgignore, Rakefile, data/webkit-rspec-
+	formatter/templates/failed.rhtml,
+	lib/rspec/core/formatters/webkit.rb, project.yml:
+	Bugfix for shared example group output.
+	[894d6255c1f5]
+
+2010-10-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 2.0.0 for changeset 1a034cb600d3
+	[cc2361ed9061]
+
+	* .hgsigs:
+	Added signature for changeset 18eebc435eab
+	[1a034cb600d3] [2.0.0]
+
+	* README.md:
+	Absolute offworld image URLs, then?
+	[18eebc435eab]
+
+	* README.md, docs/tmrspec-example.png, docs/tmrspecopts-shellvar.png:
+	Update the readme with screenshots (*experimental*)
+	[ab58011bd470]
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Cleanup the failure callback and use the snippet extractor even for
+	failed-pending examples
+	[7708887fb4be]
+
+	* data/webkit-rspec-formatter/templates/pending-fixed.rhtml:
+	Fix the DD's class in pending-fixed examples
+	[accf97e38fa9]
+
+	* data/webkit-rspec-formatter/templates/failed.rhtml:
+	HTML-escape failure message lines
+	[031941f2a380]
+
+2010-10-21  Michael Granger  <ged@FaerieMUD.org>
+
+	* README.md:
+	Fix the project page URL
+	[5ff0e8d21818]
+
+	* README.md:
+	On second thought, make the links actually links. Duh
+	[dcac16539488]
+
+	* README.md:
+	Actually add the link to the Github mirror
+	[7d0875336f79]
+
+	* README, README.md:
+	Rename README -> README.md since I changed it to Markdown
+	[118d08bb8ab1]
+
+	* data/webkit-rspec-formatter/css/textmate-rspec.css, data/webkit-
+	rspec-formatter/templates/example.rhtml, data/webkit-rspec-
+	formatter/templates/failed.rhtml, data/webkit-rspec-
+	formatter/templates/passed.rhtml, data/webkit-rspec-
+	formatter/templates/pending-fixed.rhtml, data/webkit-rspec-
+	formatter/templates/pending.rhtml,
+	lib/rspec/core/formatters/webkit.rb:
+	CSS changes, split out templates, nested example groups
+	* Changed the fonts to better ones
+	* Fixed the coloration of the "offending" line in the code snippet
+	* Split out the example template into four separate ones by status
+	for ease of maintenance.
+	* Nested example groups are now nested in the display, too.
+	[406646ae0941]
+
+2010-10-20  Michael Granger  <ged@FaerieMUD.org>
+
+	* README, Rakefile, data/webkit-rspec-formatter/css/textmate-
+	rspec.css, data/webkit-rspec-formatter/templates/example.rhtml,
+	lib/rspec/core/formatters/webkit.rb, project.yml:
+	More RSpec 2.0 fixes
+	[06221c136d6b]
+
+	* lib/rspec/core/formatters/web_kit.rb:
+	Add a shim to allow the formatter for the --format option
+	[3dd8bff179fd]
+
+2010-10-19  Michael Granger  <ged@FaerieMUD.org>
+
+	* Rakefile, project.yml:
+	Updated build system, project metadata.
+	[3df4a3eaa994]
+
+	* .hgtags:
+	Added tag 1.0.0 for changeset 45d2888c3afa
+	[e6628d07ab9f]
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Version bump to 2.0.0
+	[14ec4d0f642e]
+
+	* lib/rspec/core/formatters/webkit.rb, lib/rspec/mate/runner.rb,
+	lib/spec/mate/runner.rb, lib/spec/runner/formatter/webkit.rb:
+	Upgrade to RSpec 2.0
+	[9fac9e11e14e]
+
+	* data/css/textmate-rspec.css, data/images/clock.png,
+	data/images/cross_circle.png, data/images/cross_circle_frame.png,
+	data/images/cross_octagon.png, data/images/cross_octagon_frame.png,
+	data/images/cross_shield.png, data/images/exclamation.png,
+	data/images/exclamation_frame.png,
+	data/images/exclamation_shield.png,
+	data/images/exclamation_small.png, data/images/plus_circle.png,
+	data/images/plus_circle_frame.png, data/images/question.png,
+	data/images/question_frame.png, data/images/question_shield.png,
+	data/images/question_small.png, data/images/tick.png,
+	data/images/tick_circle.png, data/images/tick_circle_frame.png,
+	data/images/tick_shield.png, data/images/tick_small.png,
+	data/images/tick_small_circle.png, data/images/ticket.png,
+	data/images/ticket_arrow.png, data/images/ticket_exclamation.png,
+	data/images/ticket_minus.png, data/images/ticket_pencil.png,
+	data/images/ticket_plus.png, data/images/ticket_small.png,
+	data/js/jquery-1.4.2.min.js, data/js/textmate-rspec.js,
+	data/templates/example.rhtml, data/templates/footer.rhtml,
+	data/templates/header.rhtml, data/templates/page.rhtml, data/webkit-
+	rspec-formatter/css/textmate-rspec.css, data/webkit-rspec-
+	formatter/images/clock.png, data/webkit-rspec-
+	formatter/images/cross_circle.png, data/webkit-rspec-
+	formatter/images/cross_circle_frame.png, data/webkit-rspec-
+	formatter/images/cross_octagon.png, data/webkit-rspec-
+	formatter/images/cross_octagon_frame.png, data/webkit-rspec-
+	formatter/images/cross_shield.png, data/webkit-rspec-
+	formatter/images/exclamation.png, data/webkit-rspec-
+	formatter/images/exclamation_frame.png, data/webkit-rspec-
+	formatter/images/exclamation_shield.png, data/webkit-rspec-
+	formatter/images/exclamation_small.png, data/webkit-rspec-
+	formatter/images/plus_circle.png, data/webkit-rspec-
+	formatter/images/plus_circle_frame.png, data/webkit-rspec-
+	formatter/images/question.png, data/webkit-rspec-
+	formatter/images/question_frame.png, data/webkit-rspec-
+	formatter/images/question_shield.png, data/webkit-rspec-
+	formatter/images/question_small.png, data/webkit-rspec-
+	formatter/images/tick.png, data/webkit-rspec-
+	formatter/images/tick_circle.png, data/webkit-rspec-
+	formatter/images/tick_circle_frame.png, data/webkit-rspec-
+	formatter/images/tick_shield.png, data/webkit-rspec-
+	formatter/images/tick_small.png, data/webkit-rspec-
+	formatter/images/tick_small_circle.png, data/webkit-rspec-
+	formatter/images/ticket.png, data/webkit-rspec-
+	formatter/images/ticket_arrow.png, data/webkit-rspec-
+	formatter/images/ticket_exclamation.png, data/webkit-rspec-
+	formatter/images/ticket_minus.png, data/webkit-rspec-
+	formatter/images/ticket_pencil.png, data/webkit-rspec-
+	formatter/images/ticket_plus.png, data/webkit-rspec-
+	formatter/images/ticket_small.png, data/webkit-rspec-
+	formatter/js/jquery-1.4.2.min.js, data/webkit-rspec-formatter/js
+	/textmate-rspec.js, data/webkit-rspec-
+	formatter/templates/example.rhtml, data/webkit-rspec-
+	formatter/templates/footer.rhtml, data/webkit-rspec-
+	formatter/templates/header.rhtml, data/webkit-rspec-
+	formatter/templates/page.rhtml:
+	Move resource files into the datadir
+	[057eca6f4b84]
+
+2010-08-23  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/spec/mate.rb, lib/spec/mate/runner.rb,
+	lib/spec/runner/formatter/webkit.rb:
+	Updated to work under my fork of rspec/rspec-tmbundle using only an
+	environment variable.
+	[45d2888c3afa] [1.0.0]
+
+	* Rakefile:
+	Updated build system for JRuby and MRI 1.9.2.
+	[195d2dba198a]
+
+2010-04-19  Michael Granger  <ged@FaerieMUD.org>
+
+	* Rakefile, project.yml:
+	Updated build system.
+	[91754df5cb4b]
+
+2010-03-23  Michael Granger  <ged@FaerieMUD.org>
+
+	* README, data/templates/example.rhtml, lib/spec/mate.rb,
+	lib/spec/runner/formatter/webkit.rb:
+	More cleanup and documentation
+	[96b80268f5e5]
+
+2010-03-19  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, LICENSE, Rakefile, data/js/jquery-1.3.2.min.js,
+	data/js/jquery-1.4.2.min.js, data/templates/header.rhtml,
+	lib/spec/mate.rb, lib/spec/runner.rb,
+	lib/spec/runner/formatter/webkit.rb,
+	lib/spec/runner/formatter/webkit_formatter.rb, project.yml:
+	Updated to work with recent version of 'Ruby RSpec' bundle, updated
+	jQuery.
+	* Updated to work with the most-current version of the Ruby RSpec
+	bundle.
+	* Eliminated the need to hack the bundle's 'spec_mate.rb' file.
+	* Upgraded the bundled jQuery to 1.4.2.
+	* Renamed the formatter 'webkit.rb' instead of 'webkit_formatter.rb'
+	to eliminate redundancy in the name.
+	* Added post-install message about how to make it work.
+	* Updated the build system.
+	[811c00ded302]
+
+2009-06-14  deveiant  <deveiant>
+
+	* Rakefile, lib/spec/runner/formatter/webkit_formatter.rb:
+	* Updated build system.
+	 * Bumped version.
+	[bfa9742a4ee5]
+
+2009-05-29  deveiant  <deveiant>
+
+	* data/js/textmate-rspec.js:
+	Fixed the log-toggle click handler.
+	[c9c79767104a]
+
+2009-05-28  deveiant  <deveiant>
+
+	* data/js/textmate-rspec.js, lib/spec/runner.rb,
+	lib/spec/runner/formatter/webkit_formatter.rb:
+	* Qualify the data directory of the formatter as its gem path if its
+	loaded as a gem.
+	 * Remove my own environment-specific fallback hack in the runner.
+	 * Hook the click handler for opening the log to the spec title instead
+	of the whole spec block.
+	[6306a3c2e23f]
+
+2009-05-10  deveiant  <deveiant>
+
+	* data/templates/example.rhtml,
+	lib/spec/runner/formatter/webkit_formatter.rb:
+	* Updated for RSpec 1.2.4
+	[70e99153196a]
+
+2009-04-29  deveiant  <deveiant>
+
+	* Rakefile, project.yml:
+	Updated build.
+	[d8cf7477aa41]
+
+2009-04-28  deveiant  <deveiant>
+
+	* data/css/textmate-rspec.css, data/images/cross_octagon.png,
+	data/images/cross_octagon_frame.png, data/images/cross_shield.png,
+	data/images/question.png, data/images/question_frame.png,
+	data/images/question_shield.png, data/images/question_small.png,
+	data/js/textmate-rspec.js, data/templates/example.rhtml,
+	lib/spec/runner/formatter/webkit_formatter.rb, output.html:
+	* Upgraded to RSpec 1.2.4.
+	 * Handle 'pending-fixed' status.
+	 * Style tweaks
+	 * Normalized javascript function names.
+	 * Added spec-hiding by status
+	 * Cleaned up and finished log-message display.
+	[f479fadaffd8]
+
+2009-04-27  deveiant  <deveiant>
+
+	* lib/spec/mate.rb:
+	Added alternative TextMate RSpec runner.
+	[0ee8ca9d463a]
+
+	* data/css/textmate-rspec.css, data/js/textmate-rspec.js,
+	data/templates/example.rhtml, data/templates/footer.rhtml,
+	lib/spec/runner/formatter/webkit_formatter.rb, output.html:
+	* Updated with an in-progress timer that shows the graph as a
+	progress bar before the DOM ready event is fired.
+	 * Added a thread-local log-message array for outputting log messages
+	in rspec output.
+	 * Merged log-message CSS from the previous formatter hack.
+	[db46f308449c]
+
+	* LICENSE, README, Rakefile,
+	lib/spec/runner/formatter/webkit_formatter.rb, project.yml:
+	Added the build system.
+	[2afa45a6e2c6]
+
+	* data/css/textmate-rspec.css, data/images/clock.png,
+	data/images/cross_circle.png, data/images/cross_circle_frame.png,
+	data/images/exclamation.png, data/images/exclamation_frame.png,
+	data/images/exclamation_shield.png,
+	data/images/exclamation_small.png, data/images/plus_circle.png,
+	data/images/plus_circle_frame.png, data/images/tick.png,
+	data/images/tick_circle.png, data/images/tick_circle_frame.png,
+	data/images/tick_shield.png, data/images/tick_small.png,
+	data/images/tick_small_circle.png, data/images/ticket.png,
+	data/images/ticket_arrow.png, data/images/ticket_exclamation.png,
+	data/images/ticket_minus.png, data/images/ticket_pencil.png,
+	data/images/ticket_plus.png, data/images/ticket_small.png,
+	data/js/jquery-1.3.2.min.js, data/js/textmate-rspec.js,
+	data/templates/example.rhtml, data/templates/footer.rhtml,
+	data/templates/header.rhtml, data/templates/page.rhtml,
+	lib/spec/runner/formatter/webkit_formatter.rb, output.html:
+	Initial import
+	[de236604bbaf]

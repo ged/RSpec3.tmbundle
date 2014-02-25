@@ -1,0 +1,61 @@
+== v2.4.0 [2014-02-24] Michael Granger <ged@FaerieMUD.org>
+
+- Fix backtrace links for newer RSpecs
+- Add execution time to examples
+- Change the way the status labels toggle examples to be more useful
+
+
+== v2.3.0 [2013-10-07] Michael Granger <ged@FaerieMUD.org>
+
+Clean up the stylesheet (thanks to JasonM23)
+- Monospace fonts consistency
+- Updated textmate-rspec.css to use unicode in place of literals
+
+
+== v2.2.1 [2013-01-04] Michael Granger <ged@FaerieMUD.org>
+
+- Fix shared-group formatting for RSpec 2.12.2.
+- Protect the File.expand_path if $1 is nil
+
+
+== v2.2.0 [2012-05-30] Michael Granger <ged@FaerieMUD.org>
+
+- Added signature for changeset 429006ee603b
+
+
+== v2.2.0 [2012-05-30] Michael Granger <ged@FaerieMUD.org>
+
+Added CSS classes for Loggability support.
+
+
+== v2.1.5 [2012-01-07] Michael Granger <ged@FaerieMUD.org>
+
+Updates for RSpec 2.8.0.
+
+
+== v2.1.4 [2011-11-01] Michael Granger <ged@FaerieMUD.org>
+
+Updates for Ruby 1.9.3-p0 and RSpec 2.7.x.
+
+
+== v2.1.3 [2011-02-16] Michael Granger <ged@FaerieMUD.org>
+
+Remove use of deprecated Config.datadir.
+
+
+== v2.1.2 [2011-02-09] Michael Granger <ged@FaerieMUD.org>
+
+Trying the dependency fix again.
+
+
+== v2.1.1 [2011-01-26] Michael Granger <ged@FaerieMUD.org>
+
+Adjust dependency on rspec to be less paranoid.
+
+
+== v2.1.0 [2010-12-21] Michael Granger <ged@FaerieMUD.org>
+
+* Converted to Hoe
+* Renamed from 'rspec-formatter-webkit' to better match gem-naming convention
+* Updated for RSpec 2.3.0.
+

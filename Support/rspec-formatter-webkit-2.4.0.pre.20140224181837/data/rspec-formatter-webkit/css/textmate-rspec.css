@@ -1,0 +1,345 @@
+/* @override http://tenar.home.faeriemud.org/rspec-formatter/textmate-rspec.css */
+
+/* 
+ * Textmate RSpec Outputter Stylesheet
+ * $Id: textmate-rspec.css,v 406646ae0941 2010/10/21 23:25:09 ged $
+ * 
+ * Author: Michael Granger <ged@FaerieMUD.org>
+ * 
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #999;
+	font: 80% "Lucida Sans", "Lucida Grande", sans-serif;
+}
+
+pre, code {
+	font: 0.8em Menlo, Monaco, monospace;
+}
+
+#rspec-header {
+    padding-top: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 93px;
+    margin-left: -1px;
+    border-left: 1px solid rgb(102, 102, 102);
+    background-color: rgb(101, 111, 130);
+    text-shadow: black 0 1px 3px;
+    white-space: nowrap;
+    color: white;
+    position: fixed;
+    -webkit-box-shadow: rgba(25,25,25,0.5) 0 3px 3px;
+    -moz-box-shadow: rgba(25,25,25,0.5) 0 3px 3px;
+	background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    left bottom,
+	    color-stop(0, rgb(101,110,130)),
+	    color-stop(0.2, rgb(144,152,168)),
+	    color-stop(1, rgb(101,110,130))
+	);
+	background-image: -moz-linear-gradient(
+	    center top,
+	    rgb(101,110,130) 0%,
+	    rgb(144,152,168) 20%,
+	    rgb(101,110,130) 100%
+	);
+}
+
+#rspec-title-section {
+	position: absolute;
+	width: 260px;
+	top: 0;
+	text-align: right;
+}
+#rspec-title-section h1 {
+	margin-bottom: 0.2em;
+}
+#rspec-summary {
+	margin-left: 280px;
+}
+
+#rspec-summary-graph-legend {
+    margin-top: -10px;
+    padding-left: 15px;
+}
+
+#rspec-details {
+	margin-top: 120px;
+}
+
+#summary {
+	margin: 0;
+	padding: 1em 3em;
+	background-color: rgb(101, 111, 130);
+	color: white;
+}
+#summary p {
+	margin: 0;
+}
+
+.rspec-graph-legend-item {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 15px;
+    vertical-align: top;
+}
+.rspec-graph-legend-item.hidden {
+	opacity: 0.5;
+}
+
+.rspec-graph-legend-item.total {
+    margin-left: 10px;
+}
+
+.rspec-graph-legend-label {
+    display: inline-block;
+    text-align: left;
+}
+
+.rspec-graph-legend-header {
+    font-size: 12px;
+}
+
+.rspec-graph-legend-value {
+    font-size: 10px;
+}
+
+.rspec-graph-legend-swatch {
+    vertical-align: top;
+    margin-top: 1px;
+    margin-right: 3px;
+}
+
+#rspec-details {
+	padding: 0.2em 3em;
+}
+
+.example-group {
+	background: white;
+	padding: 0 0 0.5em;
+	margin: 1em 0;
+	-webkit-box-shadow: 0 2px 5px #333;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 2px 5px #333;
+	-moz-border-radius: 5px;
+background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgb(214,211,214)),
+    color-stop(0.25, rgb(189,189,189)),
+    color-stop(1, rgb(214,211,214))
+);
+background-image: -moz-linear-gradient(
+    center top,
+    rgb(214,211,214) 0%,
+    rgb(189,189,189) 25%,
+    rgb(214,211,214) 100%
+);
+}
+
+.example-group dl dt {
+	padding: 0.2em 0.4em;
+	font-size: 18px;
+	border-bottom: 1px solid #999;
+}
+.example-group dl dd + dd {
+	border-top: 1px solid rgba(64,64,64,0.3);
+}
+.example-group dl dd.spec {
+	margin: 0;
+	padding: 0.3em 1.2em 0.3em 22px;
+	background: #ddd url(../images/clock.png) no-repeat 2px 2px;
+}
+.example-group dl dd.spec.passed {
+	background-color: #aacba3;
+	background-image: url(../images/tick_shield.png);
+}
+.example-group dl dd.spec.pending {
+	background-color: #cac574;
+	background-image: url(../images/exclamation_shield.png);
+}
+.example-group dl dd.spec.pending-fixed {
+	background-color: #8a9dca;
+	background-image: url(../images/question_shield.png);
+}
+.example-group dl dd.spec.failed {
+	background-color: #d39595;
+	background-image: url(../images/cross_shield.png);
+}
+.example-group dl dd.spec.logged .spec-name:after {
+	content: " *";
+}
+.example-group dl dd.spec.logged .spec-name {
+	cursor: pointer;
+}
+.example-group dl dd.spec .spec-time {
+    float: right;
+    font-size: 9px;
+    vertical-align: baseline;
+}
+
+dd.nested-group  {
+	margin: 0;
+}
+dd.nested-group dl {
+	margin: 0;
+}
+dd.nested-group dl dt {
+	font-size: 14px;
+}
+dd.nested-group dl dt:before {
+	content: "\2026";
+}
+dd.nested-group section.example-group {
+	margin: 0;
+	padding: 0 1em;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: none;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, rgb(219,219,219)),
+	    color-stop(1, rgb(240,240,240))
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    rgb(219,219,219) 0%,
+	    rgb(240,240,240) 100%
+	);
+}
+
+
+.failure {
+	/*display: none;*/
+}
+.failure .message {
+	margin-top: 0.2em;
+	background: #dedede;
+	padding: 0.2em 1em;
+}
+.failure .backtrace {
+	overflow: auto;
+}
+.failure .backtrace p {
+	margin: 0;
+	line-height: 135%;
+}
+.failure .backtrace .backtrace-frame {
+	white-space: pre;
+}
+
+/* Ruby code, style similar to vibrant ink */
+.ruby {
+	font-size: 12px;
+	font-family: Menlo, Monaco, monospace;
+	color: white;
+	background-color: black;
+	padding: 0.1em 0 0.2em 0;
+}
+
+.ruby .keyword { color: #FF6600; }
+.ruby .constant { color: #339999; }
+.ruby .attribute { color: white; }
+.ruby .global { color: white; }
+.ruby .module { color: white; }
+.ruby .class { color: white; }
+.ruby .string { color: #66FF00; }
+.ruby .ident { color: white; }
+.ruby .method { color: #FFCC00; }
+.ruby .number { color: white; }
+.ruby .char { color: white; }
+.ruby .comment { color: #9933CC; }
+.ruby .symbol { color: white; }
+.ruby .regex { color: #44B4CC; }
+.ruby .punct { color: white; }
+.ruby .escape { color: white; }
+.ruby .interp { color: white; }
+.ruby .expr { color: white; }
+
+.ruby .offending { background-color: rgba(255,55,55,0.35); }
+.ruby .linenum {
+	width: 75px;
+	padding: 0.1em 1em 0.2em 0;
+	color: #000000;
+	background-color: #FFFBD3;
+}
+
+/* Style for log output */
+div.log-messages {
+	display: none;
+	margin: 0;
+	padding: 0;
+	background-color: #999;
+	font: 0.8em Menlo, Monaco, monospace;
+}
+div.log-message {
+	background: #eee;
+	padding: 0 1.2em;
+	margin: 0 1em;
+	border-top: 1px solid #999;
+	text-indent: -1em;
+}
+
+/* Parts of the message */
+div.log-message .log-time {
+	font-weight: bold;
+}
+div.log-message .log-time:after {
+	content: ": ";
+}
+div.log-message .log-level {
+	font-variant: small-caps;
+	border: 1px solid #ccc;
+	padding: 1px 2px;
+}
+div.log-message .log-name {
+	font-size: 1.2em;
+	color: #1e51b2;
+}
+div.log-message .log-name:before { content: "\00AB"; }
+div.log-message .log-name:after { content:  "\00BB"; }
+
+div.log-message .log-message-text {
+	padding-left: 4px;
+	font-family: Menlo, Monaco, monospace;
+}
+
+
+/* Distinguish levels */
+div.log-message.debug,
+div.debug-log-message { color: #666; }
+div.log-message.info,
+div.info-log-message {}
+
+div.log-message.warn,
+div.warn-log-message,
+div.log-message.error,
+div.error-log-message {
+	background: #ff9;
+}
+div.log-message.error .log-level,
+div.error-log-message .log-level,
+div.log-message.error .log-message-text,
+div.error-log-message .log-message-text {
+	color: #900;
+}
+div.log-message.fatal,
+div.fatal-log-message {
+	background: #900;
+	color: white;
+	font-weight: bold;
+	border: 0;
+}
+div.log-message.fatal .log-name,
+div.fatal-log-message .log-name {
+	color:  white;
+}
