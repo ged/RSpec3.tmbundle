@@ -8,26 +8,21 @@
 	<string>#!/usr/bin/env bash
 
 RUBY=${TM_RUBY:-ruby}
+WRAPPER=${TM_BUNDLE_SUPPORT}/bin/rspec-textmate2.rb
 
-RSPEC_OPTS=${TM_RSPEC_OPTS:--rrspec/core/formatters/webkit}
-RSPEC_FORMATTER=${TM_RSPEC_FORMATTER:-RSpec::Core::Formatters::WebKit}
-TM_SELECTED_FILES=${TM_SELECTED_FILES//\'/}
-
-export RUBYLIB=${TM_BUNDLE_SUPPORT}/lib
-
-cd ${TM_PROJECT_DIRECTORY:?HOME}
-
-exec 2&gt;&amp;1
-$RUBY -S rspec $RSPEC_OPTS -f $RSPEC_FORMATTER ${TM_SELECTED_FILES[@]}
-
-exit 0
+cd $TM_PROJECT_DIRECTORY
+exec $RUBY "$WRAPPER" $TM_SELECTED_FILES
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>~@r</string>
 	<key>name</key>
 	<string>Run Specs: Selected Files</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
 	<key>outputFormat</key>
 	<string>html</string>
 	<key>outputLocation</key>
@@ -36,5 +31,7 @@ exit 0
 	<string>source.ruby.rspec</string>
 	<key>uuid</key>
 	<string>479C6654-9D8D-4FFC-B216-CDB01674779C</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
