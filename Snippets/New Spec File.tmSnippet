@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>#!/usr/bin/env rspec -cfd
+
+require_relative 'spec_helper'
+
+describe ${1:MyClass} do
+
+	it "${2:is well-tested}" do
+		${0:fail "it isn't."}
+	end
+
+end
+
+</string>
+	<key>name</key>
+	<string>New Spec File</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>spec</string>
+	<key>uuid</key>
+	<string>588184B0-1725-4B79-9DDC-8DAA766C982A</string>
+</dict>
+</plist>
