@@ -14,13 +14,17 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.)\b(before|after|around)\b(?![?!])</string>
+			<string>(?&lt;!\.)\b(before|after|around|let|subject)\b(?![?!])</string>
 			<key>name</key>
 			<string>keyword.other.rspec</string>
 		</dict>
 		<dict>
 			<key>include</key>
 			<string>#behaviour</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#shared-behaviour</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -95,7 +99,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>\.(should(_not)?)\s+</string>
+					<string>\.(should(_not)?|be_false|be_true)\s+</string>
 				</dict>
 			</array>
 		</dict>
@@ -137,13 +141,13 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>^\s*(expect)(\x28|\s*\x7b)</string>
+					<string>(?!&lt;\.)(expect|allow|receive|with|and_return|and_yield)(?=\x28|\s*\x7b)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.expectation</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>((\x29|\x7d)\.to(_not)?)</string>
+					<string>((?&lt;=\x29|\x7d)\.to(_not)?)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.expectation</string>
 				</dict>
@@ -168,6 +172,26 @@
 			<string>^\s*(it|specify|scenario)\s+(.*\S)(?&lt;!do)\s*$</string>
 			<key>name</key>
 			<string>meta.rspec.pending</string>
+		</dict>
+		<key>shared-behaviour</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.rspec.shared-behavior</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.ruby</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*(include_examples|it_behaves_like|it_should_behave_like)\s+(.*\S)(?&lt;!do)\s*$</string>
+			<key>name</key>
+			<string>meta.rspec.shared-behavior</string>
 		</dict>
 		<key>single-line-example</key>
 		<dict>
