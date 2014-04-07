@@ -14,7 +14,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.)(\b(before|after|around|subject)\b(?![?!])|let!?)</string>
+			<string>(?&lt;!\.)\b((before|after|around|subject)\b(?![?!])|let!?)</string>
 			<key>name</key>
 			<string>keyword.other.rspec</string>
 		</dict>
@@ -147,7 +147,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>((?&lt;=\x29|\x7d)\.to(_not)?)</string>
+					<string>((?&lt;=\x29|\x7d)\.to(_not)?\b)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.expectation</string>
 				</dict>
