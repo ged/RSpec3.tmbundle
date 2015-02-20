@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'pathname'
+abort "This program requires an MRI Ruby" unless RUBY_ENGINE == 'ruby'
 
+require 'pathname'
 
 module FindOrCreateAlternate
 
@@ -25,22 +26,24 @@ module FindOrCreateAlternate
 		alternate = find_alternate( project_dir, relpath )
 
 		unless alternate.exist?
-			msg = "The file '%s' doesn't exist. Create it?"
+			msg = "The file '%s' doesn't exist. Create it?" % [ alternate ]
 			ans = ask_for_confirmation( 'Alternate Spec and Source', msg )
 			exit unless ans
 		end
 
 		type = 'source.ruby'
-		type += '.rspec' if alternate.to_s.start_with?( 'spec' )
+		type += '.rspec' if alternate.to_s.end_with?( '_spec.rb' )
 
 		exec MATE, '--async', '--type', type, alternate.to_s
 	rescue => err
-		message = "<b>%p</b> while switching: <b>%s</b><br>" % [ err.class, err.message ]
+		message = "<b>%p</b> while switching: <b>%s</b> (%s)<br>" %
+			[ err.class, err.message, RUBY_DESCRIPTION ]
 		err.backtrace.each do |frame|
 			message << "  <code>" << frame << "</code><br>"
 		end
 
-		exec DIALOG, 'tooltip', '--html', message
+		tooltip( message )
+		exit 0
 	end
 
 
@@ -62,6 +65,12 @@ module FindOrCreateAlternate
 	end
 
 
+	### Show a tooltip with the specified +message+.
+	def tooltip( message )
+		system DIALOG, 'tooltip', '--html', message
+	end
+
+
 	### Present a dialog asking for confirmation of +message+, and return +true+ if the user
 	### accepted.
 	def ask_for_confirmation( title, message )
@@ -74,8 +83,13 @@ module FindOrCreateAlternate
 			 '--button2', 'Cancel'
 		]
 
-		plist = IO.open( '|-' ) or exec( *cmd )
-		answer = plist[ %r{<key>buttonClicked</key>\s+<integer>(\d+)</integer>}m ]
+		reader, writer = IO.pipe
+		pid = spawn( *cmd, [:out, :err] => writer )
+		writer.close
+		Process.waitpid2( pid )
+		plist = reader.read
+
+		answer = plist[ %r{<key>buttonClicked</key>\s+<integer>(\d+)</integer>}m, 1 ]
 
 		return answer == '0'
 	end

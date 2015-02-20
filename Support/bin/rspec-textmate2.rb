@@ -52,9 +52,9 @@ def main( args )
 
 	unless status.success? || status.exitstatus == 127
 		stderr = reader.read
-		$log.error "RSpect exited with %p" % [ status ]
+		$log.error "RSpec exited with %p" % [ status ]
 		$log.debug( stderr )
-		message = "RSpec proces #{status.pid} exited with code #{status.exitstatus}\n"
+		message = "RSpec process #{status.pid} exited with code #{status.exitstatus}\n"
 		error_page( message + stderr )
 	end
 
