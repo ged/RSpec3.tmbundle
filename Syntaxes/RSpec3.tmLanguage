@@ -44,6 +44,14 @@
 		</dict>
 		<dict>
 			<key>include</key>
+			<string>#matchers</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#receive-counts</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#deprecated</string>
 		</dict>
 		<dict>
@@ -141,7 +149,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(?!&lt;\.)(expect|allow|receive|with|and_return|and_yield)(?=\x28|\s*\x7b)</string>
+					<string>(?!&lt;\.)(expect|allow)(?=\x28|\s*\x7b)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.expectation</string>
 				</dict>
@@ -150,6 +158,36 @@
 					<string>((?&lt;=\x29|\x7d)\.to(_not)?\b)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.expectation</string>
+				</dict>
+			</array>
+		</dict>
+		<key>matchers</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\.|\s)(receive|with|and_return|and_yield)(?=\x28|\s*\x7b)</string>
+					<key>name</key>
+					<string>keyword.other.rspec.matcher.mocks</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\.|\s)(eq|change|from|to|all|be_within|of|respond_to)(?=\x28|\s*\x7b)</string>
+					<key>name</key>
+					<string>keyword.other.rspec.matcher</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(be(_a(n(_(kind|instance)_of)?)?)?)(?=\x28)</string>
+					<key>name</key>
+					<string>keyword.other.rspec.matcher.predicate</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(be_(nil|truthy|falsey))</string>
+					<key>name</key>
+					<string>keyword.other.rspec.matcher</string>
 				</dict>
 			</array>
 		</dict>
@@ -172,6 +210,30 @@
 			<string>^\s*(it|specify|scenario)\s+(.*\S)(?&lt;!do)\s*$</string>
 			<key>name</key>
 			<string>meta.rspec.pending</string>
+		</dict>
+		<key>receive-counts</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\.|\s)(once|twice)</string>
+					<key>name</key>
+					<string>keyword.other.rspec.receive-count.simple</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\.|\s)(exactly|at_(least|most))(?=\x28)</string>
+					<key>name</key>
+					<string>keyword.other.rspec.receive-count</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\.|\s)times)(?!\x28)</string>
+					<key>name</key>
+					<string>keyword.other.rspec.receive-count.sugar</string>
+				</dict>
+			</array>
 		</dict>
 		<key>shared-behaviour</key>
 		<dict>
