@@ -1,8 +1,179 @@
+2015-02-20  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, Gemfile, Rakefile, rspec-formatter-webkit.gemspec:
+	Update/check in the gemspec and Gemfile.
+	[c30cce13579a] [github/master, github/version_3, tip]
+
+	* History.rdoc, lib/rspec/core/formatters/webkit.rb:
+	Bump the minor version, update history.
+	[255dd1b2032c]
+
+	* LICENSE, README.rdoc:
+	Update copyright dates
+	[2a42400efa2a]
+
+	* .rvmrc, Gemfile, Rakefile:
+	Update to Ruby 2.2, RSpec 3.2.
+	[81800976779a]
+
+	* data/rspec-formatter-webkit/templates/pending-fixed.rhtml,
+	lib/rspec/core/formatters/webkit.rb:
+	Handle a few changes/idiosyncrasies in some versions of RSpec
+	[45fc9fe28daf]
+
+2014-06-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* .rvm.gems, data/rspec-formatter-webkit/templates/failed.rhtml, data
+	/rspec-formatter-webkit/templates/passed.rhtml, data/rspec-
+	formatter-webkit/templates/pending-fixed.rhtml, data/rspec-
+	formatter-webkit/templates/pending.rhtml:
+	Update templates for RSpec 3.
+	[845600981fbe]
+
+2014-06-05  Michael Granger  <ged@FaerieMUD.org>
+
+	* Gemfile, Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Update for RSpec 3.0.0.
+	[33aa6f0fa4ec]
+
+2014-02-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* Merged changes from default
+	[29747e7e68f9]
+
+	* README.rdoc:
+	Update the README
+	[d9e33863a314]
+
+	* .hgtags:
+	Added tag v2.4.0 for changeset c13df60f1d07
+	[9473701f91f7]
+
+	* .hgsigs:
+	Added signature for changeset 305c5b7f2ed0
+	[c13df60f1d07] [v2.4.0]
+
+	* .hoerc:
+	Add gemspec and Gemfile to the Hoe's ignorelist
+	[305c5b7f2ed0]
+
+	* data/rspec-formatter-webkit/css/textmate-rspec.css, data/rspec-
+	formatter-webkit/templates/deprecations.rhtml, data/rspec-formatter-
+	webkit/templates/error.rhtml, data/rspec-formatter-
+	webkit/templates/failed.rhtml, data/rspec-formatter-
+	webkit/templates/footer.rhtml, data/rspec-formatter-
+	webkit/templates/header.rhtml, data/rspec-formatter-
+	webkit/templates/seed.rhtml, data/rspec-formatter-
+	webkit/templates/summary.rhtml, lib/rspec/core/formatters/webkit.rb:
+	Synched up with work done in the RSpec3 tmbundle
+	[8b6626a85d28]
+
+	* History.rdoc:
+	Clarify history message
+	[9dcb635f3c2a]
+
+2014-02-24  Michael Granger  <ged@FaerieMUD.org>
+
+	* Manifest.txt:
+	Fix the manifest
+	[816aac10c9c0]
+
+	* Gemfile, History.rdoc, lib/rspec/core/formatters/webkit.rb:
+	Bump the minor version, update history.
+	[7149de81e266]
+
+	* data/rspec-formatter-webkit/css/textmate-rspec.css, data/rspec-
+	formatter-webkit/templates/failed.rhtml, data/rspec-formatter-
+	webkit/templates/passed.rhtml, data/rspec-formatter-webkit/templates
+	/pending-fixed.rhtml, data/rspec-formatter-
+	webkit/templates/pending.rhtml:
+	Add execution time to examples
+	[fa2a807b4396]
+
+	* data/rspec-formatter-webkit/js/textmate-rspec.js:
+	Invert the sense of toggling with the test status labels
+	[55e57d4e3831]
+
+	* data/rspec-formatter-webkit/js/jquery-1.4.2.min.js, data/rspec-
+	formatter-webkit/js/jquery-2.1.0.min.js, data/rspec-formatter-
+	webkit/templates/header.rhtml:
+	Upgrade jQuery
+	[d160a9a2d56d]
+
+	* .hgignore:
+	Ignore generated .gemspec file
+	[7869b76132c1]
+
+	* .rvm.gems, .rvmrc:
+	Adding RVM config
+	[3683d8eeab94]
+
+	* Rakefile, lib/rspec/core/formatters/webkit.rb:
+	Fix backtrace links for newer RSpecs
+	[b0b550d91c13]
+
+2013-10-07  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.3.0 for changeset 94da6ddaecd2
+	[7c6d98f83421]
+
+	* .hgsigs:
+	Added signature for changeset e2ca3cf25e2e
+	[94da6ddaecd2] [v2.3.0]
+
+	* History.rdoc, lib/rspec/core/formatters/webkit.rb:
+	Bump minor version, update history.
+	[e2ca3cf25e2e]
+
+	* .hgignore, Gemfile, Rakefile:
+	Update build system.
+	[5217466de0d8]
+
+	* lib/rspec/core/formatters/webkit.rb:
+	Whitespace cleanup
+	[70adac233424]
+
+2013-09-23  JasonM23  <jasonm23@users.noreply.github.com>
+
+	* data/rspec-formatter-webkit/css/textmate-rspec.css:
+	Monospace fonts consistency
+
+	Monospaced fonts were a little inconsistent, they are now
+
+	 Menlo, Monaco, monospace
+
+	Across the board.
+	[2c2c6319f5b6]
+
+	* data/rspec-formatter-webkit/css/textmate-rspec.css:
+	Updated textmate-rspec.css to use unicode in place of literals
+
+	To avoid browser mangling, I've switched out the literal ellipsis
+	and double arrow quotes with their unicode replacements.
+	[516e946e9c02]
+
 2013-01-04  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.2.1 for changeset bc799ee3bec0
+	[176d15693ef4]
+
+	* .hgsigs:
+	Added signature for changeset 7192763c9a19
+	[bc799ee3bec0] [v2.2.1]
+
+	* Manifest.txt:
+	Add the ChangeLog to the manifest
+	[7192763c9a19]
+
+	* .hoerc:
+	Exclude the 'legacy' directory from the gem.
+	[3a02dcc37b4e]
 
 	* History.rdoc, Rakefile, lib/rspec/core/formatters/webkit.rb:
 	Bump the patch version, update history, bump rspec dependency.
-	[38bb23813f6a] [tip]
+	[38bb23813f6a]
 
 	* data/rspec-formatter-webkit/templates/failed.rhtml:
 	Fix shared-group formatting for RSpec 2.12.2.
@@ -667,8 +838,8 @@
 	CSS changes, split out templates, nested example groups
 	* Changed the fonts to better ones
 	* Fixed the coloration of the "offending" line in the code snippet
-	* Split out the example template into four separate ones by status
-	for ease of maintenance.
+	* Split out the example template into four separate ones by status for
+	ease of maintenance.
 	* Nested example groups are now nested in the display, too.
 	[406646ae0941]
 
