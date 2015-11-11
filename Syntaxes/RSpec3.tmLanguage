@@ -64,10 +64,15 @@
 		<key>behaviour</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(describe|context|feature)\b</string>
+			<string>^\s*([fx])?(describe|context|feature)\b</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.rspec.focus-or-xclude</string>
+				</dict>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.other.rspec.behaviour</string>
@@ -114,10 +119,15 @@
 		<key>example</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(it|specify|scenario)\b</string>
+			<string>^\s*([fx])?(it|specify|scenario)\b</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.rspec.focus-or-xclude</string>
+				</dict>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.other.rspec.example</string>
@@ -167,19 +177,19 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(?&lt;=\.|\s)(receive|with|and_return|and_yield)(?=\x28|\s*\x7b)</string>
+					<string>(?&lt;=\.|\s)(receive(_message_chain)?|with|and_return|and_yield|and_raise)(?=\x28|\s*\x7b)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.matcher.mocks</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?&lt;=\.|\s)(eq|change|from|to|all|be_within|of|respond_to)(?=\x28|\s*\x7b)</string>
+					<string>(?&lt;=\.|\s)(eq|change|from|to|by|all|be_within|of|respond_to|raise_(error|exception))(?=\x28|\s*\x7b)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.matcher</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(be(_a(n(_(kind|instance)_of)?)?)?)(?=\x28)</string>
+					<string>\b(be(_a(n(_(kind|instance)_of)?)?)?)\b</string>
 					<key>name</key>
 					<string>keyword.other.rspec.matcher.predicate</string>
 				</dict>
@@ -203,7 +213,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>string.ruby</string>
+					<string>string.c++</string>
 				</dict>
 			</dict>
 			<key>match</key>
