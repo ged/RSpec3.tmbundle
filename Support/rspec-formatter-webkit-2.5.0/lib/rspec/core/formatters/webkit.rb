@@ -295,7 +295,7 @@ class RSpec::Core::Formatters::WebKit < RSpec::Core::Formatters::BaseFormatter
 	def extra_failure_content( exception )
 		return '' unless exception
 
-		backtrace = exception.backtrace.map do |line|
+		backtrace = ( exception.backtrace || [] ).map do |line|
 			RSpec.configuration.backtrace_formatter.backtrace_line( line )
 		end.compact
 

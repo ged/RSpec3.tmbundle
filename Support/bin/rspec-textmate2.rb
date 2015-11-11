@@ -25,7 +25,7 @@ BASE_HREF            = "file://#{SUPPORT_DATADIR}/"
 RUBY = RbConfig.ruby
 
 def main( args )
-	rspec_args = Shellwords.shellsplit(RSPEC_OPTS) +
+	rspec_args = Shellwords.shellsplit( RSPEC_OPTS ) +
 		 ['-f'] +
 		 Shellwords.shellsplit( RSPEC_FORMATTER ) +
 		 ['--failure-exit-code', '127']
@@ -33,13 +33,7 @@ def main( args )
 	files = args.map do |path|
 		# Strip single quotes
 		path = path[ 1..-2 ] if path.start_with?( "'" )
-
-		# Include the line number if given
-		if path =~ /^(.*?):(\d+)$/
-			rspec_args << '-l' << $2 << $1
-		else
-			rspec_args << path
-		end
+		rspec_args << path
 	end
 
 	$log.debug "Running: RUBYLIB=#{SUPPORT_LIBDIR} #{RUBY} -S rspec #{rspec_args.join(' ')}"
