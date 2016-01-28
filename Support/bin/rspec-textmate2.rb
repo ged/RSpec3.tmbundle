@@ -30,6 +30,12 @@ def main( args )
 		 Shellwords.shellsplit( RSPEC_FORMATTER ) +
 		 ['--failure-exit-code', '127']
 
+	if ENV['RSPEC_SEED']
+		rspec_args += [
+			'--seed', ENV['RSPEC_SEED']
+		]
+	end
+
 	files = args.map do |path|
 		# Strip single quotes
 		path = path[ 1..-2 ] if path.start_with?( "'" )
