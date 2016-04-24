@@ -45,13 +45,14 @@ def main( args )
 	$log.debug "Running: RUBYLIB=#{SUPPORT_LIBDIR} #{RUBY} -S rspec #{rspec_args.join(' ')}"
 	ENV['RUBYLIB'] = SUPPORT_LIBDIR.to_s
 	$stdout.sync = true
-	reader, writer = IO.pipe
-	system( RUBY, '-S', 'rspec', *rspec_args, STDERR => writer )
-	writer.close
+	r, w = IO.pipe
+	reader = Thread.new { r.read }
+	system( RUBY, '-S', 'rspec', *rspec_args, STDERR => w )
+	w.close
 	status = $?
 
 	unless status.success? || status.exitstatus == 127
-		stderr = reader.read
+		stderr = reader.value
 		$log.error "RSpec exited with %p" % [ status ]
 		$log.debug( stderr )
 		message = "RSpec process #{status.pid} exited with code #{status.exitstatus}\n"
