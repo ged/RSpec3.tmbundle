@@ -5,7 +5,7 @@ require 'erb'
 require 'pathname'
 require 'set'
 
-gem 'rspec', '~> 3.4.0'
+gem 'rspec', '~> 3.4'
 
 require 'rspec'
 require 'rspec/core/formatters/base_text_formatter'
