@@ -177,6 +177,12 @@
 			<array>
 				<dict>
 					<key>match</key>
+					<string>\b(described_class)\b</string>
+					<key>name</key>
+					<string>keyword.other.rspec.subject</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>(?&lt;=\.|\s)(receive(_message_chain)?|with|and_return|and_yield|and_raise)(?=\x28|\s*\x7b)</string>
 					<key>name</key>
 					<string>keyword.other.rspec.matcher.mocks</string>
